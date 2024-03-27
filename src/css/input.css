@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    @apply overflow-y-hidden;
+}
+.hamburger-line{
+    @apply w-[30px] h-[2px] block my-2 bg-slate-900;
+}
+.hamburger-line:nth-child(1){
+    @apply mt-1;
+}
+.btn-2::before{
+    @apply content-none absolute w-0 h-full bg-red-600 -z-10 top-0 left-0 transition-all ease-out duration-300;
+}
+.btn-2:hover:before{
+    @apply w-full;
+}
+.more-detail{
+    @apply px-4 py-2 bg-red-600 text-white text-xs rounded focus:ring-4 focus:ring-red-300;
+}
+.wrapper-bottom img{
+    @apply transition-all ease-out cursor-pointer;
+}
+.wrapper-bottom:hover img{
+    @apply scale-110;
+}
+.btn-3{
+    @apply relative;
+}
+.btn-3::before{
+    @apply w-full h-full bg-sky-500 scale-x-0 rounded-full absolute -z-10 left-0 bottom-0 origin-center transition-all ease-out;
+}
+.btn-3:hover:before{
+    @apply scale-x-100 rounded-none;
+}
+.active{
+    @apply bg-blue-700 rounded-md;
+}
+/* .navbar:hover i{
+    @apply transition-transform ease-in-out -rotate-[20deg];
+} */
+.sidebar-non-active{
+    @apply min-w-[60px] p-3 pt-8;
+}
+.side-text-non-active{
+    @apply hidden;
+}
+.sidebar{
+    @apply sticky top-0 left-0 md:static;
+}
+.close-non-active{
+    @apply absolute ml-0 opacity-0;
+}
+.header-non-active{
+    @apply flex justify-center;
+}
+.dashboard{
+    @apply transition-all;
+}
+.dashboard-info{
+    @apply cursor-default;
+}
+.dashboard-info:hover .dashboard{
+    @apply translate-x-3 -translate-y-3 scale-150;
+}
+table{
+    @apply w-full;
+}
+.dashboard-info h1{
+    @apply font-['Montserrat'];
+}
+.background svg{
+    @apply w-[120px] absolute top-0 left-0 animate-[moveY_20s_linear_infinite];
+}
+.background svg:nth-child(2){
+    @apply w-[110px] top-[150px] left-[650px];
+}
+.background svg:nth-child(3){
+    @apply w-[80px] top-[300px] left-[900px];
+}
+.background svg:nth-child(4){
+    @apply w-[130px] -top-[30px] left-[600px];
+}
+.background svg:nth-child(5){
+    @apply w-[60px] -top-[10px] left-[400px];
+}   
+.background svg:nth-child(6){
+    @apply w-[100px] top-[100px] left-[1000px];
+}
+.background svg:nth-child(7){
+    @apply w-[80px] top-[200px] left-[400px];
+}
+
+table{
+    @apply rounded-md overflow-hidden shadow-md bg-white;
+}
+table thead{
+    @apply bg-blue-800 text-white w-full;
+}
+table thead th{
+    @apply text-white;
+}
+table th, td{
+    @apply p-3 text-left;
+}
+table tbody tr:nth-child(even){
+    @apply bg-gray-100;
+}
