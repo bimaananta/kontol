@@ -180,9 +180,7 @@
                 <div class="mb-3">
                     <label for="kondisi_alat" class="font-semibold text-slate-800 mb-1 block">Kondisi Alat</label>
                     <select name="kondisi_alat" id="kondisi_alat" class="w-full h-fit px-3 py-2 bg-white rounded-md border border-slate-300 outline-none">
-                        <option value="1">Anjay</option>
-                        <option value="1">Anjay</option>
-                        <option value="1">Anjay</option>
+                
                     </select>
                 </div>
                 <div class="mb-3">
