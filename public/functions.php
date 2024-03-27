@@ -1,5 +1,6 @@
 <?php
-    $conn = mysqli_connect("localhost", "root", "", "project-inventory");
+    session_start();
+    $conn = mysqli_connect("localhost", "root", "", "db_inventory");
 
     function query($query){
         global $conn;
