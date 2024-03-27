@@ -169,7 +169,7 @@
                 <div class="laporan-card w-full h-fit rounded-md bg-white shadow-md p-3 border border-slate-300">
                     <h1 class="text-xl font-semibold">Hannif Fahmy</h1>
                     <p class="text-sm text-slate-600 mb-2">02-11-2024</p>
-                    <p class="text-slate-600 text-sm mb-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde eligendi excepturi fugit pariatur adipisci ipsum.</p>
+                    <p class="text-slate-600 text-sm mb-3">Aku mau tambah barang kak!</p>
                     <div class="action flex flex-row gap-2">
                         <button onclick="modalToggle()" class="px-3 py-2 w-full rounded-md bg-green-600 text-white block max-w-fit text-sm transition-all filter hover:brightness-90"><i class="bi bi-envelope-arrow-up"></i> Balas</button>
                         <a href="#" class="px-3 py-2 w-full rounded-md bg-red-600 text-white block max-w-fit text-sm transition-all filter hover:brightness-90"><i class="bi bi-trash"></i> Hapus</a>
