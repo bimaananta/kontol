@@ -1,4 +1,6 @@
 <?php
+    session_start();
+
     $conn = mysqli_connect("localhost", "root", "", "db_inventory");
 
     function query($query){
@@ -47,7 +49,7 @@
         }
 
         $hashed_username = hash('sha256', $credentials["username"]);
-        $_SESSION["login"] = true; 
+        $_SESSION["login"] = $hashed_username; 
 
         if($rememberMe){
             setcookie("id", $credentials["id"], time() + (3600 * 24 * 7), "/");
@@ -126,8 +128,16 @@
                 return false;
             }
 
-            return true;
+            return [
+                "user_data" => $credentials,
+                "status" => true
+            ];
         }
+
+        return [
+            "user_data" => null,
+            "status" => false
+        ];
     }
 
     function getDashboardStats(){
@@ -162,6 +172,21 @@
             "barang_keluar" => $counter_keluar,
         ];
 
+    }
+
+    function getUserDataBySession(){
+        $hashed_username = $_SESSION["login"];
+
+        $users = query("SELECT * FROM admin;");
+        $user_data = null;
+
+        foreach($users as $user){
+            if($hashed_username == hash('sha256',$user["username"])){
+                $user_data = $user;
+            }
+        }
+
+        return $user_data;
     }
 
 ?>

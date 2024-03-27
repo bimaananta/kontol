@@ -1,17 +1,16 @@
 <?php
-    session_start();
-
     require 'functions.php';
 
-    if(checkCookie()){
+    $isCookie = checkCookie();
+    if($isCookie["status"]){
+        $user_data = $isCookie["user_data"];
         $_SESSION["login"] = true;
-    }
-
-    if(!isset($_SESSION["login"])){
+    }else if(!isset($_SESSION["login"])){
         header("Location: intro.php");
         exit;
     }
 
+    $user_data = getUserDataBySession();
     $dashboardStats = getDashboardStats();
 
 ?>
@@ -118,12 +117,12 @@
             <div class="header flex flex-row flex-wrap gap-3 justify-between">
                 <div class="header-text">
                     <p class="font-normal text-lg text-slate-400">DASHBOARD</p>
-                    <h1 class="font-normal text-3xl text-slate-700">Halo <span class="font-bold text-slate-900">Bima Ananta</span>✋</h1>
+                    <h1 class="font-normal text-3xl text-slate-700">Halo <span class="font-bold text-slate-900"><?= $user_data["nama"] ?></span>✋</h1>
                 </div>
                 <div class="profile flex flex-row items-center gap-4">
                     <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" alt="" class="w-[50px] h-[50px] rounded-full">
                     <div class="text flex flex-col">
-                        <h3 class="font-semibold text-base">Bima Ananta</h3>
+                        <h3 class="font-semibold text-base"><?= $user_data["nama"] ?></h3>
                         <a href="#" class="text-xs">View Profile</a>
                     </div>
                 </div>
