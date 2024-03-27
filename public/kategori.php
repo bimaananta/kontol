@@ -256,7 +256,7 @@
                 <i class="bi bi-x absolute top-1 right-2 text-4xl cursor-pointer text-slate-600" onclick="modalToggle()"></i>
                 <h1 class="text-3xl font-semibold mb-3">Kategori</h1>
                 <p class="text-slate-600">Kategori alat pada website ini bersifat statis dan tidak dapat diubah. Jika diubah atau dihapus, maka juga akan turut serta menghapus barang dan alat dengan kategori terkait</p>
-                <button class="px-3 py-2 rounded-md bg-green-600 text-white text-sm mt-5">Mengerti</button>
+                <button class="px-3 py-2 rounded-md bg-green-600 text-white text-sm mt-5" onclick="modalToggle()">Mengerti</button>
             </div>
             <div class="w-full h-[5px] bg-blue-600 absolute bottom-0"></div>
         </div>
