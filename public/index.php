@@ -12,6 +12,8 @@
         exit;
     }
 
+    $dashboardStats = getDashboardStats();
+
 ?>
 
 <!DOCTYPE html>
@@ -130,28 +132,28 @@
                 <div class="dashboard-info total-barang flex-1 min-w-[200px] h-[150px] bg-blue-500 rounded flex flex-row justify-end items-center p-5 gap-5 shadow-lg relative overflow-hidden">
                     <i class="bi bi-box-seam dashboard text-8xl text-slate-900 opacity-25 absolute -bottom-3 left-0 block -rotate-6 scale-150"></i>
                     <div class="text z-10">
-                        <h1 class="text-white font-semibold text-3xl">69</h1>
+                        <h1 class="text-white font-semibold text-3xl"><?= $dashboardStats["total_alat"] ?></h1>
                         <h1 class="text-white font-semibold text-sm">Total Barang</h1>
                     </div>
                 </div>
                 <div class="dashboard-info kategori-barang flex-1 min-w-[200px] h-[150px] bg-yellow-600 rounded flex flex-row justify-end items-center p-5 gap-5 shadow-lg relative overflow-hidden">
                     <i class="bi bi-folder dashboard text-8xl text-slate-900 opacity-25 absolute -bottom-1 left-0 block -rotate-6 scale-150"></i>
                     <div class="text z-10">
-                        <h1 class="text-white font-semibold text-3xl">5</h1>
+                        <h1 class="text-white font-semibold text-3xl"><?= $dashboardStats["total_kategori"] ?></h1>
                         <h1 class="text-white font-semibold text-sm">Kategori Barang</h1>
                     </div>
                 </div>
                 <div class="dashboard-info barang-masuk flex-1 min-w-[200px] h-[150px] bg-green-600 rounded flex flex-row justify-end items-center p-5 gap-5 shadow-lg relative overflow-hidden">
                     <i class="bi bi-bag-plus dashboard text-8xl text-slate-900 opacity-25 absolute -bottom-1 left-0 block -rotate-6 scale-150"></i>
                     <div class="text z-10">
-                        <h1 class="text-white font-semibold text-3xl">12</h1>
+                        <h1 class="text-white font-semibold text-3xl"><?= $dashboardStats["barang_masuk"] ?></h1>
                         <h1 class="text-white font-semibold text-sm">Barang Masuk</h1>
                     </div>
                 </div>
                 <div class="dashboard-info barang-keluar flex-1 min-w-[200px] h-[150px] bg-red-500 rounded flex flex-row justify-end items-center p-5 gap-5 shadow-lg relative overflow-hidden">
                     <i class="bi bi-clipboard2-minus dashboard text-8xl text-slate-900 opacity-25 absolute -bottom-1 left-0 block -rotate-6 scale-150"></i>
                     <div class="text z-10">
-                        <h1 class="text-white font-semibold text-3xl">11</h1>
+                        <h1 class="text-white font-semibold text-3xl"><?= $dashboardStats["barang_keluar"] ?></h1>
                         <h1 class="text-white font-semibold text-sm">Barang Keluar</h1>
                     </div>
                 </div>
